@@ -8,5 +8,10 @@ $cadastro->execute(array(':nome'=>$nome, ':senha'=>$senha));
 
 if ($cadastro==true){
     echo 'cadastradado com sucesso';
+
+echo '<script>
+alert("Cadastro feito!");
+window.location.href="../views/cadastro.php";
+</script>';
 }
 ?>
