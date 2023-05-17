@@ -8,8 +8,8 @@
 </head>
 <body>
     <form method="post" action="../controller/controllercadastro.php">
-        <input type="text" name="nome" placeholder="Digite um nome">
-        <input type="password"  name="senha" placeholder="Digite uma senha">
+        <input type="text" placeholder="Digite um nome" required  name=nome/>
+        <input type="password"   placeholder="Digite uma senha" required name=senha/>
         <button type="submit">cadastrar</button>
     </form>
 </body>
