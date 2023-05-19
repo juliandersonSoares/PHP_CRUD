@@ -1,6 +1,6 @@
 <?php
 include('../controller/conn.php');
-$tabela = $conn->prepare("SELECT * FROM cadastro;");
+$tabela = $conn->prepare("SELECT * FROM cadastrologin;");
 $tabela->execute();
 $rowTabela = $tabela->fetchAll();
 ?>
@@ -21,10 +21,14 @@ $rowTabela = $tabela->fetchAll();
         <tbody>
             <?php
             foreach($rowTabela as $linha){
+                //a tag TR é utilizada para definir uma linha dentro de uma tabela.
+                echo '<tr>';
+                echo "<th scope='row'>".$linha['id']."</th>";
                 echo "<td>" . $linha['nome'] . "</td>";
                 echo "<td>" . $linha['senha'] . "</td>";
                 echo '<td><a href=../controller/controlleredit.php?mensagem=' . $linha['id'] . ' class="btn btn-warning">Editar</a></td>';
-                echo '<td><a href=../controller/controllerdelit.php.php?mensagem=' . $linha['id'] . ' class="btn btn-danger">Excluir</a></td>';
+                echo '<td><a href=../controller/controllerdelit.php?mensagem=' . $linha['id'] . ' class="btn btn-danger">Excluir</a></td>';
+                echo '</tr>';
             }
             ?>
         </tbody>
