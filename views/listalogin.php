@@ -1,6 +1,6 @@
 <?php
 include('../controller/conn.php');
-$tabela = $conn->prepare("SELECT * FROM cadastrologin;");
+$tabela = $conn->prepare("SELECT * FROM cadastro;");
 $tabela->execute();
 $rowTabela = $tabela->fetchAll();
 ?>
@@ -14,7 +14,11 @@ $rowTabela = $tabela->fetchAll();
 </head>
 <body>
     <table>
+        <button type="submit"> <a href="../views/cadastro.php">cadastrar</a></button>
+        <br>
+        <br>
         <tr>
+            <td>ID</td>
             <td>Nome</td>
             <td>Senha</td>
         </tr>
