@@ -7,7 +7,7 @@
         header("Location: ../views/listalogin.php");
    }
 
-    $deli=$conn->prepare('DELETE FROM cadastrologin  WHERE id = :id');
+    $deli=$conn->prepare('DELETE FROM cadastro  WHERE id = :id');
     $deli->execute(array(':id'=>$id));
 
     echo"<script>
