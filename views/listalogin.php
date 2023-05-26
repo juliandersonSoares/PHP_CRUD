@@ -30,7 +30,7 @@ $rowTabela = $tabela->fetchAll();
                 echo "<th scope='row'>".$linha['id']."</th>";
                 echo "<td>" . $linha['nome'] . "</td>";
                 echo "<td>" . $linha['senha'] . "</td>";
-                echo '<td><a href=../controller/controlleredit.php?mensagem=' . $linha['id'] . ' class="btn btn-warning">Editar</a></td>';
+                echo '<td><a href=edit.php?mensagem=' . $linha['id'] . ' class="btn btn-warning">Editar</a></td>';
                 echo '<td><a href=../controller/controllerdelit.php?mensagem=' . $linha['id'] . ' class="btn btn-danger">Excluir</a></td>';
                 echo '</tr>';
             }
