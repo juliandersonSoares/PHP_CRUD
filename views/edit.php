@@ -22,7 +22,7 @@ $rowTable = $busca->fetchAll();
     <title>Document</title>
 </head>
 <body>
-    <form action="../controller/controlleredit.php" method="post">
+    <form action="../controller/controllerupdate.php" method="post">
         <input type="text" name="id" value="<?php echo $rowTable[0]['id'];?>">
         <input type="text" name="nome" value="<?php echo $rowTable[0]['nome']; ?>">
         <input type="password" name="senha" value="<?php echo $rowTable[0]['senha'];  ?>" />
